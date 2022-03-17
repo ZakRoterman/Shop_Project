@@ -1,0 +1,45 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+    Add To Store
+{% endblock %}
+
+{% block css%}
+    <link href="{{url_for('static',filename='css/login.css')}}" rel="stylesheet">
+    {% endblock%}
+
+{% block content %}
+<br>
+    <h1>Add Item To Store</h1>
+    <form action="{{url_for('api.create_item')}}" method='POST'>
+        {{ form.hidden_tag() }}
+
+        <div>
+            {{form.name.label(class="form-label")}}
+            {{form.name(class="form-control")}}
+        </div>
+        <div>
+            {{form.desc.label(class="form-label")}}
+            {{form.desc(class="form-control")}}
+        </div>
+        <div>
+            {{form.price.label(class="form-label")}}
+            {{form.price(class="form-control")}}
+            
+        </div>
+        <div>
+            {{form.img.label(class="form-label")}}
+            {{form.img(class="form-control")}}
+        </div>
+        <div>
+            {{form.category.label(class="form-label")}}
+            {{form.category(class="form-control")}}
+        </div>
+        <br>
+        <div>
+        {{form.submit(class="bt btn-success form-control")}}
+        </div>
+
+    </form>
+
+{% endblock %}

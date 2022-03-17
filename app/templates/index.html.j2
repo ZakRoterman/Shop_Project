@@ -1,0 +1,18 @@
+{% extends 'base.html.j2' %}
+
+{% block title %}
+    Fancy Things Home
+{% endblock %}
+
+{% block css%}
+    <link href="{{url_for('static',filename='css/index.css')}}" rel="stylesheet">
+    {% endblock%}
+
+{% block content %}
+<br>
+  <h1>Fancy Things Shop</h1>
+  <br> 
+  <p>Here at the Fancy Things Shop, we pride ourselfs in carrying only the best of goods. Our online shop is a one of a kind experience where you will be able to buy items you could not obtain anywhere else.</p>
+  <br>
+  <p>*****ALL SALES FINAL*****</p>
+{% endblock %}
